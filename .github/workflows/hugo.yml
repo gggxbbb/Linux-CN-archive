@@ -21,6 +21,12 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.122.0
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: "福建.广西.广东"   
     steps:
       - name: Install Hugo CLI
         run: |
