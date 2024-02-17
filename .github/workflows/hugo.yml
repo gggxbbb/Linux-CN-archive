@@ -26,7 +26,7 @@ jobs:
       id-token: write
     environment:
       name: github-pages
-      url: "福建.广西.广东"   
+      url: "https://福建.广西.广东"   
     steps:
       - name: Install Hugo CLI
         run: |
@@ -51,7 +51,12 @@ jobs:
           hugo \
             --gc \
             --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"          
+            --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.3.1
+        with:
+          name: "public"
+          path: "public/*"
       - name: Deploy to gh-pages
         uses: actions/deploy-pages@v4.0.4
         with:
