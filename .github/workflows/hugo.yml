@@ -46,11 +46,7 @@ jobs:
             --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"          
-      - name: Deploy to BunnyCDN
-        uses: ayeressian/bunnycdn-storage-deploy@v2.2.0
+      - name: Deploy to gh-pages
+        uses: actions/deploy-pages@v4.0.4
         with:
-          source: "public"
-          storageZoneName: "${{ secrets.BUNNY_ZONE }}"
-          storagePassword: "${{ secrets.BUNNY_PASSWORD }}"
-          upload: "true"
-          storageEndpoint: "sg.storage.bunnycdn.com"
+          artifact_name: "public"
