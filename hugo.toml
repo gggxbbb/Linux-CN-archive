@@ -1,11 +1,11 @@
-baseURL = 'https://archive.linux.cn/'
+baseURL = 'https://福建.广西.广东/'
 languageCode = 'zh-Hans'
-title = 'Linux.cn Archive'
+title = 'Linux.cn Archive Mirror'
 theme = "mainroad"
 uglyURLs = true
 
 [Params.logo]
-  title = "Linux.cn Archive"
+  title = "Linux.cn Archive Mirror"
 [Params.sidebar]
   home = "right"
   list = "right"
